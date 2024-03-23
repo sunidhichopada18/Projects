@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background: linear-gradient(360deg, rgb(83, 111, 121), #f3f5f5);
+    border: none;
+}
+.wrapper{
+    height: 400px;
+    width: 320px;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+.wrapper .card{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: #fff;
+    border: solid linear-gradient(360deg, rgb(29, 55, 65), #f3f5f5) 3px;
+    border-radius: 10px;
+    transform: translateY(180deg);
+    padding: 5px;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: 0.6s;
+}
+.wrapper:hover > .front-face{
+    transform: rotateY(-180deg);
+
+}
+
+.wrapper .card img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;/*keeps the aspect ration and fills the given dimension. the image will be clipped to fit*/
+}
+.wrapper .back-face{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    transform: rotateY(180deg);
+    border: solid linear-gradient(360deg, rgb(29, 55, 65), #f3f5f5) 3px;
+}
+
+.wrapper:hover > .back-face{
+    transform: rotateY(0deg);
+}
+
+.wrapper .back-face .profile{
+     height: 150px;
+     width: 150px;
+     border-radius: 50%; 
+     border-width: 5px;
+     background: linear-gradient(360deg, rgb(83, 111, 121), #f3f5f5);
+     padding: 5px;    
+}
+
+.wrapper .back-face .info{
+    text-align: center;
+}
+
+.back-face .info .title{
+    font-size: 20px;
+    font-weight: bold;
+}
+.back-face .social .icon{
+    height: 40px;
+    width: 50px;
+    justify-content: center;
+    display: inline;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.back-face .social .icon:hover{
+    filter: brightness(110%);
+}
+

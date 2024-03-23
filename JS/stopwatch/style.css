@@ -1,0 +1,76 @@
+/*General Styles*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+  }
+
+/* Stop-Watch Styling*/
+  body{
+    height: 100vh;
+    background: url(project-4-img.jpg) no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  .container {
+    width: 60%;
+    height: 350px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 0 3px;
+    border: solid 8px;
+  }
+
+  .header{
+    font-size: 1.2rem;
+    border: solid 2px black;
+    background-color: black;
+    padding: 5px;
+    width: 50%;
+    margin: 20px auto;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+  }
+
+
+  #timer{
+    width: 100%;
+    font-size: 72px;
+    text-align: center;
+    margin: 0px auto;
+    padding: 35px;
+  }
+
+  .buttons{
+    text-align: center;
+  }
+  button{
+    margin: 0 10px;
+    border: none;
+  }
+
+  button i{
+    font-size: 2rem;
+    padding: 10px;
+    color: #fff;
+    width: 50px;
+    border-radius: 5px;
+  }
+
+  #play{
+    background-color: green;
+  }
+
+  #pause{
+    background-color: orange;
+  }
+
+  #reset{
+    background-color: red;
+  }
